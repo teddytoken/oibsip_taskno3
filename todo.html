@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <h2>To-Do List</h2>
+        <div class="box2">
+            <input type="text" placeholder="Add your new todo" id="task">
+            <button onclick="add()">Add</button>
+        </div>
+        <ul id="lists">
+            <!-- <li>Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li> -->
+        </ul>
+    </div>
+    </div>
+
+    <script>
+        let inpBox = document.querySelector('#task');
+        let list = document.querySelector('#lists');
+
+function add(){
+    if(inpBox.value === ''){
+        alert("Nothing to add!!! please write something");
+    }
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = `${inpBox.value}<input type="checkbox">`;
+        list.appendChild(li);
+
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
+
+        li.addEventListener("click", function(){
+            this.classList.toggle('done');
+        })
+        li.querySelector("span").addEventListener("click", function(){
+            li.remove();
+        })
+    }
+    inpBox.value = "";
+}
+
+</script>
+</body>
+
+</html>

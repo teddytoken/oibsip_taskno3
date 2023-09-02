@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    padding: 10px;
+    min-height: 100vh;
+    background: linear-gradient(to right, transparent, rgb(249, 168, 226)),url("icon3.jpg");
+    background-size: cover;
+}
+.box{
+    width: 100%;
+    max-width: 600px;
+    /* background: rgb(100, 96, 96); */
+    margin: 50px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.box h2{
+    color:rgb(19, 19, 19);
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.box2{
+    display: flex;
+    justify-content: space-between;
+    /* border: 5px solid black; */
+    border-radius: 15px;
+    /* box-shadow: 10px 10px 10px black; */
+    margin-bottom: 25px;
+}
+.box2 input{
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(10, 10, 9);
+    border-radius: 15px;
+    outline: none;
+    flex: 1;
+    border: none;
+    box-shadow: 5px 5px 10px black;
+}
+.box2 button{
+    width: 90px;
+    height: 60px;
+    border: none;
+    outline: none;
+    border-radius: 11px;
+    cursor: pointer;
+    font-size: 25px;
+    background: rgb(243, 108, 155);
+    margin-left: 30px;
+    box-shadow: 5px 5px 10px rgb(12, 12, 12);
+}
+ul li{
+    list-style: none;
+    font-size: 20px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+.box li{
+    position: relative;
+    align-items: center;
+    background: linear-gradient(to right, pink, rgb(63, 63, 248));
+    box-shadow: 5px 5px 10px black;
+    min-height: 45px; 
+    width: 406px;
+    margin: 25px 0;
+    padding: 10px 10px 0 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    /* right: 10px; */
+}
+.box li input[type="checkbox"]{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    appearance: auto;
+    clip-path: circle(46% at 50% 50%);
+    cursor: pointer;
+    right: -40px;
+    accent-color: rgb(237, 57, 57);
+}
+.box li.done{
+    background: linear-gradient(to bottom right, pink, red);
+    text-decoration: line-through;
+}
+#lists{
+    position: relative;
+    margin-top: 20px;
+    height: 150px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+
+ul li span{
+    position: absolute;
+    right: -100px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 41px;
+    color: rgb(1, 15, 15);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: wheat;
+}
